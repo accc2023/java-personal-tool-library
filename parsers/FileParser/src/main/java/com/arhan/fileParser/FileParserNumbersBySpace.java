@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class FileParserNumbersBySpace {
 
 
-    String filePath;
+    private final String filePath;
 
-    FileParserNumbersBySpace(String filePath) {
+    public FileParserNumbersBySpace(String filePath) {
         this.filePath = filePath;
     }
 
@@ -22,7 +22,7 @@ public class FileParserNumbersBySpace {
      * @param input The 2D ArrayList to populate.
      * @return The populated 2D ArrayList.
      */
-    ArrayList<ArrayList<Long>> parseFile(ArrayList<ArrayList<Long>> input) {
+    public ArrayList<ArrayList<Long>> parseFile(ArrayList<ArrayList<Long>> input) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
             String line;
